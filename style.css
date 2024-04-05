@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    margin: 0px 166px; /*отступ: сверху и снизу; слева и справа*/
+    margin: 0 50px; /*отступ: сверху и снизу; слева и справа*/
 }
 
 .header {
@@ -19,7 +19,8 @@ body {
 .header-line {
     padding-top: 50px; /*внутренний отступ*/
     display: flex; /*элементы располагаются в линию друг за другом*/
-    align-items: center; /*выравнивание эементов по линии главного элемента-->*/ 
+    align-items: center; /*выравнивание эементов по линии главного элемента-->*/
+    width: 100%;
     justify-content: space-around; /*расположение элементов на небольшом расстоянии друг от друга*/
 }
 
@@ -31,7 +32,7 @@ body {
     font-weight: 700; /*толщина шрифта*/
     font-size: 14px; /*размер шрифта*/
 
-    margin-right: 25px; /*расстояние между каждым элементом*/
+    margin-right: 5px; /*расстояние между каждым элементом*/
 
     transition: color 0.3s linear; /*при наведении на эл-т, они плавно меняют цвет*/
 }
@@ -96,6 +97,7 @@ body {
 
 .header-down {
     position: relative; /*рожитель для класса header-titile*/
+    align-content: center;
 }
 
 /*Добро пожаловать в*/
@@ -103,12 +105,12 @@ body {
     color: #D67E35;
     font-family: 'Tinos', 'serif';
     font-size: 50px;
-    font-weight: 400px;
-    
+    font-weight: 400;
+
     text-align: center; /*текст по середине*/
-    position: absolute; 
+    position: relative;
     left: 0;
-    
+
     margin-top: 222px;
     margin-bottom: 12px; /*расстояние между "Наш ресторан" и "Дом лучшей еды"*/
 }
@@ -117,27 +119,19 @@ body {
 .header-suptitle {
     color: #fff;
     font-size: 18px;
+    height: fit-content;
     font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
 }
 
 /*две полоски между "Дом лучшей еды"*/
-.header-suptitle:after {
-    position: absolute;
+.header-suptitle:after, .header-suptitle:before {
     content: ''; /*нужен чтобы сделать линии*/
     height: 2px;
-    width: 61px; 
-    background-color: #fff; 
-    top: 127px;
-    left: 56px;
-}
-.header-suptitle:before {
-    position: absolute;
-    content: ''; /*нужен чтобы сделать линии*/
-    height: 2px;
-    width: 61px; 
-    background-color: #fff; 
-    top: 127px;
-    left: 308px;
+    width: 61px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    background-color: #fff;
 }
 
 /*кнопка View menu*/
@@ -145,19 +139,19 @@ body {
     background-color: #FF7400;
     padding: 14px 28px; /*внутреннее расстояние между текстом и рамкой кнопки*/
     color: #fff; /*цвет кнопки*/
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
     text-decoration: none; /*убираем нижнее подчеркивание текста*/
-    
+
     /*для плавности*/
-    transition: background-color 0.3s liner;
+    transition: background-color 0.3s linear;
 }
 
 /*при наведении на кнопку View menu меняет цвет*/
 .header-button:hover {
     background-color: #9d4700;
-    
+
 }
 
 
@@ -233,7 +227,7 @@ body {
 
 .text-custom-white {
     padding-top: 10px; /*внутренний отступ*/
-    color:#FFFFFF; /*цвет "Адрес", "Время работы" в подвале */
+    color: #FFFFFF; /*цвет "Адрес", "Время работы" в подвале */
     display: flex; /*элементы располагаются в линию друг за другом*/
     align-items: center; /*выравнивание эементов по линии главного элемента*/
     justify-content: space-around; /*расположение элементов на небольшом расстоянии друг от друга*/
@@ -254,7 +248,6 @@ body {
 }
 
 
-
 .cards-holder {
     display: flex; /*чтобы элементы располагались в строку, а не друг за другом сверху-вниз*/
     justify-content: space-between;
@@ -266,7 +259,7 @@ body {
     margin-right: 31px; /*расстояние между карточками*/
     background-color: #fff;
     margin-top: 500px;
-    padding: 10px 10px;  /*отступ текста от границ на карточке*/
+    padding: 10px 10px; /*отступ текста от границ на карточке*/
 }
 
 /*картинка карточки по середине*/
@@ -280,7 +273,7 @@ body {
 .card-title {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;  /*отступ снизу от текста "Магическая Атмосфера" на карточке*/
+    margin-bottom: 20px; /*отступ снизу от текста "Магическая Атмосфера" на карточке*/
     font-family: 'Tinos', serif;
     font-size: 26px;
     font-weight: 400;
@@ -298,7 +291,7 @@ body {
     font-family: 'Tinos', serif;
     font-size: 26px;
     font-weight: 400;
-    color: #656363;  /*цвет текста описания*/
+    color: #656363; /*цвет текста описания*/
 }
 
 .history {
@@ -381,7 +374,7 @@ body {
 
 .black-block {
     background-image: url(black-bg.jpg); /*ссылка на картинку*/
-    padding: 80px 0;  /*отступы сверху и снизу; слева и справа*/
+    padding: 80px 0; /*отступы сверху и снизу; слева и справа*/
 }
 
 /*левый текст*/
@@ -463,7 +456,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 100px; /*отступ сверху от таблицы с ценниками*/
-    margin-bottom: 100px;  /*отступ снизу*/
+    margin-bottom: 100px; /*отступ снизу*/
 }
 
 
@@ -475,44 +468,44 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem 1.5rem;
-    background-color: $code;
+    background-color: $ code;
     margin-left: 400px;
-      
+
     @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
+        flex-direction: row;
+        align-items: center;
     }
 }
-      
+
 .cta-form {
     margin-bottom: 2rem;
     text-align: center;
-        
+
     @media (min-width: 768px) {
-    margin-bottom: 0;
-    margin-right: 2rem;
-    text-align: left;
-  }
+        margin-bottom: 0;
+        margin-right: 2rem;
+        text-align: left;
+    }
 }
-        
+
 h2 {
     font-size: 1.5rem;
     width: 100%;
     max-width: 25ch;
     margin: 0 auto;
     text-align: center;
-        
+
     @media (min-width: 768px) {
-    text-align: left;
-    margin: 0;
-  }
+        text-align: left;
+        margin: 0;
+    }
 }
-        
+
 p {
     margin-top: 1rem;
     font-size: 1rem;
     width: 100%;
-    max-width: 24ch; 
+    max-width: 24ch;
 }
 
 .form {
@@ -520,15 +513,15 @@ p {
 }
 
 .form__input {
-     width: clamp(120px, 50vw, 420px);
-     height: 2.5rem;
-     padding: 0 1.25rem;
-     border: 1px solid $black;
-     border-radius: 2px;
-     margin: 0.625rem auto;
-     transition: all 250ms;
-     @media (min-width: 768px) {
-     width: clamp(120px, 35vw, 420px);
+    width: clamp(120px, 50vw, 420px);
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid $ black;
+    border-radius: 2px;
+    margin: 0.625rem auto;
+    transition: all 250ms;
+    @media (min-width: 768px) {
+        width: clamp(120px, 35vw, 420px);
     }
 }
       
