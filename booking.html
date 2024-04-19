@@ -6,8 +6,10 @@
     <!--ссылка на шрифт Open Sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="/jquery-3.6.0.min.js"></script>
     <title>Ресторан</title>
 </head>
 <body>
@@ -21,12 +23,12 @@
 
             <div class='nav'>
                 <!--ссылка куда-то ведет-->
-                <a class='nav-item' href="index.html">ГЛАВНАЯ</a> 
+                <a class='nav-item' href="index.html">ГЛАВНАЯ</a>
                 <a class='nav-item' href="menu.html">МЕНЮ</a>
-                <a class='nav-item' href="us.html">О НАС</a>
+                <a class='nav-item' href="about_us.html">О НАС</a>
                 <a class='nav-item' href="@">БРОНЬ</a>
             </div>
-            
+
             <!--корзина-->
             <div class='cart'>
                 <!--ссылка, которая кнопка, на которой картинка корзины-->
@@ -60,41 +62,40 @@
             <!--кнопка "Заказ столика"-->
             <div class='btn'>
                 <a class='button' href='#'>ЗАКАЗ СТОЛИКА</a>
-            </div>  
+            </div>
         </div>
-                
-    </div>   
-</div>
 
-<main>
-<!--поле брони-->
-<div class="container_booking">
-    
-    <div class="cta-form">
-      <h2>Fill out the form!</h2> 
-    <p></p>
     </div>
-    
-    <form action="" class="form">
-      
-      <input type="text" placeholder="Name" class="form__input" id="name" />
-      <!--(<!<label for="name" class="form__label">Name</label>)-->
-
-      <input type="email" placeholder="Email" class="form__input" id="email" />
-      <!--(<!<label for="email" class="form__label">Email</label>)-->
-
-      <input type="text" placeholder="Subject" class="form__input" id="subject" />
-      <!--(<label for="subject" class="form__label">Subject</label>)-->
-      
-    </form>
 </div>
+
+<main id="booking">
+    <!--поле брони-->
+    <div class="container_booking">
+
+        <div class="cta-form">
+            <h2>Форма для бронирования столика</h2>
+            <p></p>
+        </div>
+
+        <form id="contactform" onsubmit="formSubmit(this)">
+            <p><label for="name">ФИО: </label><br><input type="text" name="name" class="form__input" id="name"></p>
+            <p><label for="email">Почта: </label><br><input type="email" name="email" class="form__input" id="email"></p>
+            <p><label for="time">Время: </label><br><input type="datetime-local" name="time" class="form__input" id="time"></p>
+            <p><label for="count">Сколько человек: </label><br><input type="text" name="count" class="form__input" id="count"></p>
+            <p><label for="wishes">Пожелания: </label><br><input type="text" name="wishes" class="form__input" id="wishes"></p>
+
+            <div class='header-bth'>
+                <p><input type='submit' class='header-button'></p>
+            </div>
+        </form>
+    </div>
 
 </main>
-    
+
 <footer>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        
+
         <div class="container py-5">
             <div class="text-custom-white row g-3">
                 <div class="col-lg-3 col-md-3">
@@ -106,20 +107,37 @@
                 <div class="col-lg-3 col-md-3">
                     <h4 class="text-custom-gold mb-3">Время Работы</h4>
                     <h6 class="text-light">Понедельник - Воскресенье:</h6>
-                    <p class="mb-3">10:00  - 2:00</p>
+                    <p class="mb-3">10:00 - 2:00</p>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <h4 class="text-light mb-3">Рассылка</h4>
                     <p>Оставьте свои данные, чтобы знать первым о наших акциях!</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-						<input id="emailInput" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
-						<button id="clearButton" type="button" class="btn btn-custom-orange2 py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
-					</div>
+                        <input id="emailInput" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text"
+                               placeholder="Ваша почта">
+                        <button id="clearButton" type="button"
+                                class="btn btn-custom-orange2 py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>      
-    
+</footer>
+
+<script src="app.js"></script>
+
+<script>
+    function formSubmit(formelem) {
+        let name = document.getElementsByName("name")[0].value;
+        let email = document.getElementsByName("email")[0].value;
+        let time = document.getElementsByName("time")[0].value;
+        let count = document.getElementsByName("count")[0].value;
+        let wishes = document.getElementsByName("wishes")[0].value;
+        var alerttext = `${name}, запрос на бронирование столика на ${count} человек отправлен!`;
+        alert(alerttext);
+    }
+</script>
+
 </body>
 </html>

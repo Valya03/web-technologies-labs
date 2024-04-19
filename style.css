@@ -42,6 +42,11 @@ body {
     color: #d81d1d; /*меняем цвет на красный*/
 }
 
+.active {
+    color: #FF7400;
+    font-size: 14px;
+}
+
 
 .cart {
     position: relative; /*общий блок cart будет родителем для картинки маленькеой корзинки*/
@@ -194,9 +199,30 @@ body {
     margin-right: 10px;
 }
 
+.clickable {
+    cursor: pointer;
+    color: #FF7400;
+    text-underline: #FF7400;
+    text-decoration:underline;
+}
+
 .footer .btn.btn-link:hover {
     letter-spacing: 1px;
     box-shadow: none;
+}
+
+.hidebox {
+    width: auto;
+    max-width: max-content;
+}
+
+.hidebox > h2 {
+    text-align: center;
+}
+
+.hidebox > p {
+    max-width: 70%;
+    text-align: center;
 }
 
 .footer .copyright {
@@ -418,7 +444,6 @@ body {
     color: #D67E34;
 }
 
-
 .burgers {
     display: flex; /*маленькие картинки одинаковых бургеров располагаются справа*/
     justify-content: center; /*расположим все по центру*/
@@ -463,31 +488,31 @@ body {
     margin-left: 400px;
 
     @media (min-width: 768px) {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 }
 
 .cta-form {
+    width: 100%;
     margin-bottom: 2rem;
     text-align: center;
 
     @media (min-width: 768px) {
         margin-bottom: 0;
         margin-right: 2rem;
-        text-align: left;
+        text-align: center;
     }
 }
 
 h2 {
     font-size: 1.5rem;
     width: 100%;
-    max-width: 25ch;
     margin: 0 auto;
     text-align: center;
 
     @media (min-width: 768px) {
-        text-align: left;
+        text-align: center;
         margin: 0;
     }
 }
