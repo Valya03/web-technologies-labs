@@ -5,6 +5,7 @@ import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.cors.routing.*
+import ru.restaurant.db.DatabaseSingleton
 import ru.restaurant.plugins.*
 
 fun main() {
@@ -13,6 +14,7 @@ fun main() {
 }
 
 fun Application.module() {
+    DatabaseSingleton.init()
     configureSecurity()
     install(CORS) {
         anyHost()
