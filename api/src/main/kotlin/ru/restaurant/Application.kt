@@ -18,8 +18,8 @@ fun Application.module() {
         anyHost()
         allowHeader(HttpHeaders.ContentType)
     }
+    configureSwagger()
     configureHTTP()
     configureSerialization()
-    configureTemplating()
     configureRouting()
 }
