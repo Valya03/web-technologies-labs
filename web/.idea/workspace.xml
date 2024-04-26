@@ -5,47 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91e6ec45-374f-496d-babf-39e6da859d86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/Application.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/plugins/HTTP.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/plugins/Routing.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/plugins/Security.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/plugins/Serialization.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/kotlin/ru/restaurant/plugins/Templating.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/main/resources/openapi/documentation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api/src/test/kotlin/ru/restaurant/ApplicationTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/restoran.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about_us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../black-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/black-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/burger.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../card.png" beforeDir="false" afterPath="$PROJECT_DIR$/card.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jquery-3.6.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/jquery-3.6.0.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../phone.png" beforeDir="false" afterPath="$PROJECT_DIR$/phone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pizza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Материалы.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Материалы.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/black-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/burger.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card.png" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-3.6.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/jquery-3.6.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phone.png" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/phone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/labapp/static/images/pizza.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2fYE7DmNMRbEuSdaYbzXHaipFF8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -65,11 +44,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.main.executor": "Run",
     "Python.web.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/web-technologies-labs",
+    "last_opened_file_path": "C:/Users/79093/OneDrive/Документы/GitHub/web-technologies-labs/web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,7 +59,35 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79093\OneDrive\Документы\GitHub\web-technologies-labs\web\labapp\static\images" />
+      <recent name="C:\Users\79093\OneDrive\Документы\GitHub\web-technologies-labs\web\labapp\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="web" type="PythonConfigurationType" factoryName="Python">
       <module name="web" />
       <option name="ENV_FILES" value="" />
@@ -88,7 +97,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (web)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -103,12 +111,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
