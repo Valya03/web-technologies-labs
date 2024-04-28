@@ -1,0 +1,543 @@
+body {
+    margin: 0; /*избавляет от белых краев, рамок*/
+    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+}
+
+.container {
+    margin: 0 50px; /*отступ: сверху и снизу; слева и справа*/
+}
+
+.header {
+    /*фотоновая картинка*/
+    background-image: url(bg.jpg); /*url-это путь до картинки (заднего фона)*/
+    height: 100vh; /*высота картинки(заднего фона); 100vh-вся высота экрана*/
+    background-repeat: no-repeat; /*не повторяет изображение*/
+    background-size: cover; /*картинка растягивается на весь монитор равномерно*/
+}
+
+/*В header-line располагаются все элементы меню*/
+.header-line {
+    padding-top: 50px; /*внутренний отступ*/
+    display: flex; /*элементы располагаются в линию друг за другом*/
+    align-items: center; /*выравнивание эементов по линии главного элемента-->*/
+    width: 100%;
+    justify-content: space-around; /*расположение элементов на небольшом расстоянии друг от друга*/
+}
+
+/*элементы меню в шапке сайта - ГЛАВНАЯ, МЕНЮ, О НАС, БРОНЬ*/
+/*по-умолчанию были синими с подчеркиванием*/
+.nav-item {
+    color: #fff; /*белый цвет*/
+    text-decoration: none; /*убирает подчеркивание текста*/
+    font-weight: 700; /*толщина шрифта*/
+    font-size: 14px; /*размер шрифта*/
+
+    margin-right: 5px; /*расстояние между каждым элементом*/
+
+    transition: color 0.3s linear; /*при наведении на эл-т, они плавно меняют цвет*/
+}
+
+/*работает, когда наводим мышкой*/
+.nav-item:hover {
+    color: #d81d1d; /*меняем цвет на красный*/
+}
+
+.active {
+    color: #FF7400;
+    font-size: 14px;
+}
+
+
+.cart {
+    position: relative; /*общий блок cart будет родителем для картинки маленькеой корзинки*/
+
+    border-right: 1px solid #FFFFFF; /*правая толстая белая палочка от рисунка корзины*/
+    padding-right: 10px; /*небольшое расстоние между картинкой корзины и палочки*/
+    height: 50px; /*высота картинки корзины (маленький)*/
+}
+
+.cart-img {
+    position: absolute; /*картинка не зависит ни от кого, располагается как ей угодно*/
+    top: 18px; /*расстояние сверху*/
+    right: 7px; /*отстут от картинки справа*/
+}
+
+.num {
+    color: #fff; /*белый цвет номера телефона*/
+    text-decoration: none; /*нижнее подчеркивание*/
+    font-weight: 700; /*толщина текста*/
+
+    transition: color 0.3s linear;
+}
+
+.num:hover {
+    color: #d81d1d; /*меняем цвет на красный*/
+}
+
+.phone-text {
+    font-size: 14px; /*размер текста*/
+    font-weight: 400; /*толщина текста*/
+    color: #fff; /*белый текста*/
+}
+
+.phone-holder {
+    display: flex; /*элементы располагаются в линию друг за другом*/
+    align-items: center; /*выравнивание эементов по линии главного элемента*/
+}
+
+/*кнопка "Заказ столика"*/
+.button {
+    background-color: #FF7400; /*цвет кнопки*/
+    color: #fff; /*цвет текста на кнопке*/
+    text-decoration: none; /*убираем нижнее подчеркивание текста*/
+    padding: 14px 18px; /*внутренние отступы текста внутри кнопки (сверху и снизу; справа и слева)*/
+    font-weight: 700; /*толщина букв*/
+
+    transition: background-color 0.2s linear; /*при наведении на эл-т, он плавно меняет цвет*/
+}
+
+.button:hover {
+    background-color: #894b17; /*при наведении мышки, меняем кнопку на темно-оранж цыет*/
+}
+
+.header-down {
+    position: relative; /*рожитель для класса header-titile*/
+    align-content: center;
+}
+
+/*Добро пожаловать в*/
+.header-titile {
+    color: #D67E35;
+    font-family: 'Tinos', 'serif';
+    font-size: 50px;
+    font-weight: 400;
+
+    text-align: center; /*текст по середине*/
+    position: relative;
+    left: 0;
+
+    margin-top: 222px;
+    margin-bottom: 12px; /*расстояние между "Наш ресторан" и "Дом лучшей еды"*/
+}
+
+/*Наш ресторан*/
+.header-suptitle {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    height: fit-content;
+    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+}
+
+/*две полоски между "Дом лучшей еды"*/
+.header-suptitle:after, .header-suptitle:before {
+    content: ''; /*нужен чтобы сделать линии*/
+    height: 2px;
+    width: 61px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    background-color: #fff;
+}
+
+/*кнопка View menu*/
+.header-button {
+    background-color: #FF7400;
+    padding: 14px 28px; /*внутреннее расстояние между текстом и рамкой кнопки*/
+    color: #fff; /*цвет кнопки*/
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+    text-decoration: none; /*убираем нижнее подчеркивание текста*/
+
+    /*для плавности*/
+    transition: background-color 0.3s linear;
+}
+
+/*при наведении на кнопку View menu меняет цвет*/
+.header-button:hover {
+    background-color: #9d4700;
+
+}
+
+
+/*** Footer ***/
+.footer {
+    background: url(black-bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.clickable {
+    cursor: pointer;
+    color: #FF7400;
+    text-underline: #FF7400;
+    text-decoration:underline;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.hidebox {
+    width: auto;
+    max-width: max-content;
+}
+
+.hidebox > h2 {
+    text-align: center;
+}
+
+.hidebox > p {
+    max-width: 70%;
+    text-align: center;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+.text-custom-white {
+    padding-top: 10px; /*внутренний отступ*/
+    color: #FFFFFF; /*цвет "Адрес", "Время работы" в подвале */
+    display: flex; /*элементы располагаются в линию друг за другом*/
+    align-items: center; /*выравнивание эементов по линии главного элемента*/
+    justify-content: space-around; /*расположение элементов на небольшом расстоянии друг от друга*/
+}
+
+
+/*Отправить почту, которая находится в подвале*/
+.btn-custom-orange2 {
+    background-color: #D67E34; /*сама кнопка отпарвки*/
+    color: #fff; /*текст Отправить*/
+}
+
+.text-custom-orange {
+    color: #D67E35; /*цвет текста "Наше меню"*/
+    text-align: center; /*текст по центру*/
+    margin-bottom: 20px; /*отступ от "Наше меню" и таблицей ценников*/
+    padding-top: 100px; /*отступ сверху*/
+}
+
+
+.cards-holder {
+    display: flex; /*чтобы элементы располагались в строку, а не друг за другом сверху-вниз*/
+    justify-content: space-between;
+}
+
+.card {
+    width: 349px; /*размер текста на карточках*/
+    box-shadow: 10px 10px 40px 20px #0000001A; /*квадраты карточек с тенью*/
+    margin-right: 31px; /*расстояние между карточками*/
+    background-color: #fff;
+    margin-top: 500px;
+    padding: 10px 10px; /*отступ текста от границ на карточке*/
+}
+
+/*картинка карточки по середине*/
+.card-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 31px; /*отступ сверху от маленькой картинки на карточке*/
+}
+
+/*текст на картинке карточки по середине*/
+.card-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /*отступ снизу от текста "Магическая Атмосфера" на карточке*/
+    font-family: 'Tinos', serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+/*оранжевый текст на карточках*/
+.card-title span {
+    color: #D67E35;
+    margin-left: 2px;
+}
+
+/*описание карточки с картинкой по середине*/
+.card-desc {
+    text-align: center; /*текст карточек по центру*/
+    font-family: 'Tinos', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #656363; /*цвет текста описания*/
+}
+
+.history {
+    margin-top: 166px; /*отступ сверху от "Наша История"*/
+    padding-bottom: 200px; /*самый нижний отступ*/
+}
+
+.history-title {
+    font-family: 'Tinos', serif;
+    font-size: 54px;
+    font-weight: 400;
+    width: 444px; /*ширина текста*/
+    text-align: center; /*текст по центру*/
+    margin-top: 21px; /*отступ снизу от загаловка*/
+}
+
+/*оранжевый текст "История"*/
+.history-title span {
+    color: #D67E35;
+}
+
+
+.history-desc {
+    color: #656363; /*меняем цвет описания Истории*/
+    font-size: 16px;
+    width: 444px; /*ширина текста*/
+    text-align: center; /*текст по центру*/
+}
+
+.history-number {
+    display: flex; /*расположим цифры в одну строчку*/
+    width: 444px; /*ширина текста*/
+    justify-content: center;
+    margin-top: 40px; /*расстояние между цифрами и описание истории*/
+    margin-left: 30px;
+}
+
+.number-item {
+    margin-right: 60px; /*расстояние между цифрами*/
+    text-align: center; /*текст по центру*/
+    font-size: 40px; /*размер шрифта*/
+    color: #BC9060; /*цвет цифр*/
+}
+
+.number-item span {
+    display: block; /*"Напитки", "Еда", "закуски" располагаются сниху от своих цифр*/
+    color: #000; /*черный цвет "Напитки", "Еда", "закуски"*/
+}
+
+/*три картинки*/
+.history-images {
+    position: relative; /*родитель для наших картинок*/
+}
+
+.history-holder {
+    display: flex;
+}
+
+.imgages-1 {
+    position: absolute;
+    z-index: 0;
+    top: 54px;
+    left: 211px;
+}
+
+.imgages-2 {
+    position: absolute;
+    z-index: 999;
+    top: -92px;
+    left: 383px;
+}
+
+.imgages-3 {
+    position: absolute;
+    z-index: 999;
+    top: 246px;
+    left: 481px;
+}
+
+
+.black-block {
+    background-image: url(black-bg.jpg); /*ссылка на картинку*/
+    padding: 80px 0; /*отступы сверху и снизу; слева и справа*/
+}
+
+/*левый текст*/
+.left-title {
+    color: #D67E34;
+    font-family: 'Tinos', serif;
+    font-size: 52px;
+    font-weight: 400;
+
+    margin-bottom: 20px; /*отсут от загаловка и подтекста*/
+}
+
+/*левый текст*/
+.left-text {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+/*правая кнопка*/
+.right-btn {
+    background-color: #FF7400;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 700;
+}
+
+/*для разделения левой и правой части*/
+.block-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*заголовок блюд*/
+.dishes-title {
+    font-family: 'Tinos', serif;
+    font-size: 54px;
+    font-weight: 400;
+    text-align: center; /*текст по центру*/
+    padding-top: 132px; /*отступ сверху*/
+    margin-bottom: 139px; /*отступ от "Наши Блюда" и картинками бургеров*/
+}
+
+/*оранжевый цвет Наши "Блюда"*/
+.dishes-title span {
+    color: #D67E34;
+}
+
+.burgers {
+    display: flex; /*маленькие картинки одинаковых бургеров располагаются справа*/
+    justify-content: center; /*расположим все по центру*/
+}
+
+/*текст цен маленьких бергеров*/
+.burger-item {
+    display: flex; /*располагается справа*/
+    align-items: center; /*выравнивание по центру относительно левых маленьких одинаковых картинок*/
+    margin-bottom: 29px; /*отсутп между маленькими картинками*/
+}
+
+.burgers-image {
+    margin-right: 20px; /*отступ между большой картинкой и маленькими*/
+}
+
+/*текст маленьких бургеров*/
+.burger-text {
+    font-family: 'Tinos', serif;
+    font-size: 26px;
+    margin-left: 20px; /*отступ слева от маленьких картинок*/
+}
+
+.container_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /*отступ сверху от таблицы с ценниками*/
+    margin-bottom: 100px; /*отступ снизу*/
+}
+
+
+.container_booking {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 1.5rem;
+    margin-left: 400px;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cta-form {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        text-align: center;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 24ch;
+}
+
+.form {
+    align-self: center;
+}
+
+.form__input {
+    width: clamp(120px, 50vw, 420px);
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0.625rem auto;
+    transition: all 250ms;
+    @media (min-width: 768px) {
+        width: clamp(120px, 35vw, 420px);
+    }
+}
+

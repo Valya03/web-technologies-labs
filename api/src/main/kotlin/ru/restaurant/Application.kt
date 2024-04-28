@@ -3,8 +3,10 @@ package ru.restaurant
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
+import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.cors.routing.*
+import io.ktor.server.routing.*
 import ru.restaurant.db.DatabaseSingleton
 import ru.restaurant.plugins.*
 
@@ -20,8 +22,9 @@ fun Application.module() {
         anyHost()
         allowHeader(HttpHeaders.ContentType)
     }
+    configureSerialization()
     configureSwagger()
     configureHTTP()
-    configureSerialization()
+    configureFreeMarker()
     configureRouting()
 }

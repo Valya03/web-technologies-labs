@@ -32,6 +32,7 @@ dependencies {
 //    implementation("io.swagger.codegen.v3:swagger-codegen-generators:1.0.47")
     implementation("io.github.smiley4:ktor-swagger-ui:2.8.0")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
+    implementation("io.ktor:ktor-server-freemarker")
     implementation("io.ktor:ktor-serialization-gson-jvm")
     implementation("io.ktor:ktor-server-html-builder-jvm")
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.10.1")
