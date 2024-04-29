@@ -22,5 +22,9 @@ fun Application.configureSwagger() {
         tag("form") {
             description = "Methods for working with forms"
         }
+
+        tag("auth") {
+            description = "Authentication methods"
+        }
     }
 }

@@ -9,6 +9,7 @@ class FormsDaoImpl : FormsDao {
 
     private fun resultRowToFormEntity(row: ResultRow) = FormEntity(
         id = row[Forms.id],
+        authorId = row[Forms.authorId],
         fullname = row[Forms.fullname],
         email = row[Forms.email],
         dateTime = row[Forms.dateTime],
@@ -24,18 +25,27 @@ class FormsDaoImpl : FormsDao {
     }
 
     override suspend fun allForms(): List<FormEntity> = dbQuery {
-        Forms.selectAll().map { resultRowToFormEntity(it) }
+        Forms
+            .selectAll()
+            .map(::resultRowToFormEntity)
     }
 
     override suspend fun addNewForm(form: FormEntity): FormEntity = dbQuery {
         val insertStatement = Forms.insert {
-            it[Forms.fullname] = form.fullname.orEmpty()
-            it[Forms.email] = form.email.orEmpty()
-            it[Forms.dateTime] = form.dateTime.orEmpty()
-            it[Forms.personsCount] = (form.personsCount ?: 0)
-            it[Forms.wishes] = form.wishes.orEmpty()
+            it[authorId] = form.authorId ?: -1
+            it[fullname] = form.fullname.orEmpty()
+            it[email] = form.email.orEmpty()
+            it[dateTime] = form.dateTime.orEmpty()
+            it[personsCount] = (form.personsCount ?: 0)
+            it[wishes] = form.wishes.orEmpty()
         }
         insertStatement.resultedValues?.singleOrNull()?.let(::resultRowToFormEntity) ?: FormEntity()
+    }
+
+    override suspend fun formsByAuthorId(authorId: Int) = dbQuery {
+        Forms
+            .selectAll().where { Forms.authorId eq authorId }
+            .map(::resultRowToFormEntity)
     }
 
     override suspend fun deleteForm(id: Int): Boolean = dbQuery{
@@ -45,11 +55,20 @@ class FormsDaoImpl : FormsDao {
     override suspend fun editForm(form: FormEntity): Boolean = dbQuery {
         Forms
             .update({ Forms.id eq (form.id ?: 0) }) {
-                it[Forms.fullname] = form.fullname.orEmpty()
-                it[Forms.email] = form.email.orEmpty()
-                it[Forms.dateTime] = form.dateTime.orEmpty()
-                it[Forms.personsCount] = (form.personsCount ?: 0)
-                it[Forms.wishes] = form.wishes.orEmpty()
+                it[authorId] = form.authorId ?: -1
+                it[fullname] = form.fullname.orEmpty()
+                it[email] = form.email.orEmpty()
+                it[dateTime] = form.dateTime.orEmpty()
+                it[personsCount] = (form.personsCount ?: 0)
+                it[wishes] = form.wishes.orEmpty()
             } > 0
+    }
+
+    override suspend fun getFormAuthorId(formId: Int) = dbQuery {
+        Forms
+            .selectAll().where { Forms.id eq formId }
+            .map(::resultRowToFormEntity)
+            .singleOrNull()
+            ?.authorId ?: -1
     }
 }

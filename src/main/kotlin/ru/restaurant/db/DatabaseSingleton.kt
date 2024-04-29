@@ -15,6 +15,7 @@ object DatabaseSingleton {
 
         transaction(database) {
             SchemaUtils.create(Forms)
+            SchemaUtils.create(Users)
         }
     }
 

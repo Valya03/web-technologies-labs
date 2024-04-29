@@ -15,7 +15,7 @@
 <body>
 
 
-<div class='header'> <!--шапка сайта-->
+<div class='header-hidden'> <!--шапка сайта-->
     <div class='container'> <!--помогает отодвигать элементы от правой и левой части экрана-->
         <div class='header-line'> <!--меню сайта-->
             <div class='header-logo'> <!--класс для логотипа-->
@@ -87,7 +87,7 @@
                 <!--правый блок, кнопка справа-->
                 <div class='right'>
                     <div class='right-button'>
-                        <a href='#' class='right-btn'>ЗАКАЗ СТОЛИКА</a>
+                        <a href='#' class='button'>ЗАКАЗ СТОЛИКА</a>
                         <!-- #- это кнопка без ссылки-->
                     </div>
                 </div>

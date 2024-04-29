@@ -5,14 +5,16 @@ import com.auth0.jwt.algorithms.Algorithm
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.auth.jwt.*
+import io.ktor.server.config.*
 import io.ktor.server.response.*
 
-fun Application.configureSecurity() {
-    // Please read the jwt property from the config file if you are using EngineMain
-    val jwtAudience = "restaurant-customers"
-    val jwtDomain = "https://restaurant.ru/"
-    val jwtRealm = "our-restaurant"
-    val jwtSecret = "restaurant-secret"
+fun Application.configureSecurity(appConfig: HoconApplicationConfig) {
+
+    val jwtSecret = appConfig.property("jwt.secret").getString()
+    val jwtDomain = appConfig.property("jwt.issuer").getString()
+    val jwtAudience = appConfig.property("jwt.audience").getString()
+    val jwtRealm = appConfig.property("jwt.realm").getString()
+
     authentication {
         jwt {
             realm = jwtRealm

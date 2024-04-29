@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
 body {
     margin: 0; /*избавляет от белых краев, рамок*/
-    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+    font-family: 'Inter', sans-serif; /*шрифт Inter*/
 }
 
 .container {
@@ -15,9 +24,18 @@ body {
     background-size: cover; /*картинка растягивается на весь монитор равномерно*/
 }
 
+.header-hidden {
+    /*фотоновая картинка*/
+    background-image: url(bg.jpg); /*url-это путь до картинки (заднего фона)*/
+    height: fit-content; /*высота картинки(заднего фона); 100vh-вся высота экрана*/
+    background-repeat: no-repeat; /*не повторяет изображение*/
+    background-size: cover; /*картинка растягивается на весь монитор равномерно*/
+}
+
 /*В header-line располагаются все элементы меню*/
 .header-line {
-    padding-top: 50px; /*внутренний отступ*/
+    padding-top: 25px; /*внутренний отступ*/
+    padding-bottom: 25px;
     display: flex; /*элементы располагаются в линию друг за другом*/
     align-items: center; /*выравнивание эементов по линии главного элемента-->*/
     width: 100%;
@@ -92,7 +110,7 @@ body {
     text-decoration: none; /*убираем нижнее подчеркивание текста*/
     padding: 14px 18px; /*внутренние отступы текста внутри кнопки (сверху и снизу; справа и слева)*/
     font-weight: 700; /*толщина букв*/
-
+    border-radius: 12px;
     transition: background-color 0.2s linear; /*при наведении на эл-т, он плавно меняет цвет*/
 }
 
@@ -105,10 +123,21 @@ body {
     align-content: center;
 }
 
+.booking {
+    width: 100%;
+    height: 80vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Добро пожаловать в*/
 .header-titile {
     color: #D67E35;
-    font-family: 'Tinos', 'serif';
+    font-family: 'Inter', 'serif';
     font-size: 50px;
     font-weight: 400;
 
@@ -126,7 +155,7 @@ body {
     font-size: 18px;
     margin-top: 10px;
     height: fit-content;
-    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+    font-family: 'Inter', sans-serif; /*шрифт Inter*/
 }
 
 /*две полоски между "Дом лучшей еды"*/
@@ -147,7 +176,7 @@ body {
     color: #fff; /*цвет кнопки*/
     font-size: 15px;
     font-weight: 700;
-    font-family: 'Open Sans', sans-serif; /*шрифт Open Sans*/
+    font-family: 'Inter', sans-serif; /*шрифт Inter*/
     text-decoration: none; /*убираем нижнее подчеркивание текста*/
 
     /*для плавности*/
@@ -194,7 +223,7 @@ body {
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Inter", serif;
     font-weight: 900;
     margin-right: 10px;
 }
@@ -203,7 +232,7 @@ body {
     cursor: pointer;
     color: #FF7400;
     text-underline: #FF7400;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .footer .btn.btn-link:hover {
@@ -292,7 +321,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px; /*отступ снизу от текста "Магическая Атмосфера" на карточке*/
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 26px;
     font-weight: 400;
 }
@@ -306,7 +335,7 @@ body {
 /*описание карточки с картинкой по середине*/
 .card-desc {
     text-align: center; /*текст карточек по центру*/
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 26px;
     font-weight: 400;
     color: #656363; /*цвет текста описания*/
@@ -318,7 +347,7 @@ body {
 }
 
 .history-title {
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 54px;
     font-weight: 400;
     width: 444px; /*ширина текста*/
@@ -398,7 +427,7 @@ body {
 /*левый текст*/
 .left-title {
     color: #D67E34;
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 52px;
     font-weight: 400;
 
@@ -431,7 +460,7 @@ body {
 
 /*заголовок блюд*/
 .dishes-title {
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 54px;
     font-weight: 400;
     text-align: center; /*текст по центру*/
@@ -462,7 +491,7 @@ body {
 
 /*текст маленьких бургеров*/
 .burger-text {
-    font-family: 'Tinos', serif;
+    font-family: 'Inter', serif;
     font-size: 26px;
     margin-left: 20px; /*отступ слева от маленьких картинок*/
 }
@@ -476,33 +505,32 @@ body {
     margin-bottom: 100px; /*отступ снизу*/
 }
 
-
-.container_booking {
-    width: 100%;
-    max-width: 768px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 2rem 1.5rem;
-    margin-left: 400px;
-
-    @media (min-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-    }
+tbody td {
+    /* 1. Animate the background-color
+       from transparent to white on hover */
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.2s linear;
+    transition-delay: 0.3s, 0s;
+    /* 2. Animate the opacity on hover */
+    opacity: 0.6;
 }
 
-.cta-form {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
+td {
+    /* 3. Scale the text using transform on hover */
+    transform-origin: center left;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
 
-    @media (min-width: 768px) {
-        margin-bottom: 0;
-        margin-right: 2rem;
-        text-align: center;
-    }
+table {
+    width: 90%;
+    margin: 25px;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.5em;
 }
 
 h2 {
@@ -524,20 +552,98 @@ p {
     max-width: 24ch;
 }
 
-.form {
-    align-self: center;
+.auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat; /*не повторяет изображение*/
+    background-size: cover;
 }
 
-.form__input {
-    width: clamp(120px, 50vw, 420px);
-    height: 2.5rem;
-    padding: 0 1.25rem;
-    border: 1px solid black;
-    border-radius: 2px;
-    margin: 0.625rem auto;
-    transition: all 250ms;
-    @media (min-width: 768px) {
-        width: clamp(120px, 35vw, 420px);
-    }
+.wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    background: #fff;
+    padding: 34px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.wrapper form {
+    margin-top: 30px;
+}
+
+.wrapper form .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #FF7400;
+}
+
+form .policy {
+    display: flex;
+    align-items: center;
+}
+
+.auth form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-box.send-button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    border: none;
+    background: #FF7400;
+    cursor: pointer;
+}
+
+.input-box.send-button input:hover {
+    background: #894b17;
+}
+
+.hint-text h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.hint-text h3 a {
+    color: #FF7400;
+    text-decoration: none;
+}
+
+.hint-text h3 a:hover {
+    text-decoration: underline;
+}

@@ -35,6 +35,7 @@ dependencies {
     implementation("io.ktor:ktor-server-freemarker")
     implementation("io.ktor:ktor-serialization-gson-jvm")
     implementation("io.ktor:ktor-server-html-builder-jvm")
+    implementation("io.ktor:ktor-server-sessions")
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.10.1")
     implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
     implementation("io.ktor:ktor-server-netty-jvm")

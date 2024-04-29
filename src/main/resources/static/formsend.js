@@ -30,12 +30,12 @@ sendbtn.addEventListener("click", function (e) {
     .then( response => {
         // fetch в случае успешной отправки возвращает Promise, содержащий response объект (ответ на запрос)
         // Возвращаем json-объект из response и получаем данные из поля message
-        response.json().then(function(data) {
-            console.log(data)
-            // alert(data)
-            //statfield.textContent.bold();
-            //alert(data.message);
-        });
+
+        if (response.ok) {
+            window.location.href = "/booking";
+        } else {
+            alert(response.statusText);
+        }
     })
     .catch( error => {
         alert(error);

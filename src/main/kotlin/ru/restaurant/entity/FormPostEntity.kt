@@ -1,10 +1,6 @@
 package ru.restaurant.entity
 
-import com.google.gson.annotations.SerializedName
-
-data class FormEntity(
-    var id: Int? = null,
-    var authorId: Int? = null,
+data class FormPostEntity(
     var fullname: String? = null,
     var email: String? = null,
     var dateTime: String? = null,

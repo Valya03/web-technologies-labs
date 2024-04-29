@@ -18,7 +18,7 @@
     <div class='container'> <!--помогает отодвигать элементы от правой и левой части экрана-->
         <div class='header-line'> <!--меню сайта-->
             <div class='header-logo'> <!--класс для логотипа-->
-                <img src="logo.png" alt=""> <!--картинка логотипа, путь картинки-->
+                <img src="/static/logo.png" alt=""> <!--картинка логотипа, путь картинки-->
             </div>
 
             <#if navmenu??>

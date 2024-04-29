@@ -13,7 +13,7 @@
 </head>
     
 <body>
-<div class='header'> <!--шапка сайта-->
+<div class='header-hidden'> <!--шапка сайта-->
     <div class='container'> <!--помогает отодвигать элементы от правой и левой части экрана-->
         <div class='header-line'> <!--меню сайта-->
             <div class='header-logo'> <!--класс для логотипа-->

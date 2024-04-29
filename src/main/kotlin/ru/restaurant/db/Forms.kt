@@ -4,6 +4,7 @@ import org.jetbrains.exposed.sql.Table
 
 object Forms : Table() {
     val id = integer("id").autoIncrement()
+    val authorId = integer("authorId")
     val fullname = varchar("fullname", 128)
     var email = varchar("email", 128)
     var dateTime = varchar("dateTime", 64)

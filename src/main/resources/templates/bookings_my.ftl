@@ -72,36 +72,12 @@
 <main id="booking" class="booking">
     <!--поле брони-->
     <div class="wrapper">
-        <h2>Форма для бронирования столика</h2>
+        <h2>Перечень заявок на бронирование</h2>
 
-        <form id="contactform">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="ФИО" required>
-            </div>
-
-            <div class="input-box">
-                <input type="email" name="email" placeholder="Почта" required>
-            </div>
-
-            <div class="input-box">
-                <input type="datetime-local" name="time" placeholder="Время" required>
-            </div>
-
-            <div class="input-box">
-                <input type="number" name="count" placeholder="Сколько человек" required>
-            </div>
-
-            <div class="input-box">
-                <input type="text" name="wishes" placeholder="Пожелания" required>
-            </div>
-
-            <div class='input-box send-button'>
-                <input type="Submit" id="sendbtn" value="Отправить"/>
-            </div>
-        </form>
+        <table id="items" class="table table-striped"></table>
 
         <div class="hint-text">
-            <h3>Хотите посмотреть отправленные вами заявки? <a href="/booking/my">Посмотреть</a></h3>
+            <h3>Хотите отправить новую заявку? <a href="/booking">Отправить</a></h3>
         </div>
     </div>
 
@@ -142,7 +118,7 @@
 
 
 <script src="/static/app.js"></script>
-<script src="/static/formsend.js"></script>
+<script src="/static/myforms.js"></script>
 
 </body>
 </html>

@@ -4,9 +4,12 @@ import freemarker.cache.ClassTemplateLoader
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
 import io.ktor.server.http.content.*
+import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import io.ktor.server.sessions.*
 import kotlinx.css.Position
 import ru.restaurant.getImageFromResources
+import ru.restaurant.sessions.UserSession
 import java.io.File
 
 val navigationMenu = listOf(
@@ -50,11 +53,37 @@ fun Application.configureFreeMarker() {
         }
 
         get("booking") {
-            call.respondTemplate(
-                "booking.ftl", mapOf(
-                    "navmenu" to navigationMenu
+            val userSession = call.sessions.get<UserSession>()
+            if (userSession == null) {
+                call.respondRedirect("/login")
+            } else {
+                call.respondTemplate(
+                    "booking.ftl", mapOf(
+                        "navmenu" to navigationMenu
+                    )
                 )
-            )
+            }
+        }
+
+        get("booking/my") {
+            val userSession = call.sessions.get<UserSession>()
+            if (userSession == null) {
+                call.respondRedirect("/login")
+            } else {
+                call.respondTemplate(
+                    "bookings_my.ftl", mapOf(
+                        "navmenu" to navigationMenu
+                    )
+                )
+            }
+        }
+
+        get("login") {
+            call.respondTemplate("login.ftl", mapOf<String, Any>())
+        }
+
+        get("register") {
+            call.respondTemplate("register.ftl", mapOf<String, Any>())
         }
     }
 }
